@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Pier Sans;
+    src: url('/assets/fonts/PierSans-Regular.otf') format('opentype');
+    // src: url('fontname.eot?#iefix') format('embedded-opentype'),
+    //      url('fontname.woff') format('woff'),
+    //      url('fontname.ttf') format('truetype'),
+    //      url('fontname.svg#fontname') format('svg');
+}
+
+// @font-face {
+//     font-family: 'Sk-Modernist';
+//     src: url('/assets/sk-modernist-webfont.woff') format('woff');
+//     // src: url('fontname.eot?#iefix') format('embedded-opentype'),
+//     //      url('fontname.woff') format('woff'),
+//     //      url('fontname.ttf') format('truetype'),
+//     //      url('fontname.svg#fontname') format('svg');
+// }
+
+// @font-face {
+//     font-family: "Pier Sans";
+//     src: url('bingo.eot');
+//     src: local('bingo');
+//     src: url('bingo.svg#bingo') format('svg');
+//     src: url('bingo.otf') format('opentype'); }
+
+// @font-face {
+//     font-family: 'sk-modernistregular';
+//     src: url('../../fonts/sk-modernist-regular-webfont.woff2') format('woff2'),
+//          url('../') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+
+
+
+@font-face {
+    font-family: 'sk-modernistregular';
+    src: url('/assets/fonts/sk-modernist-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/sk-modernist-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

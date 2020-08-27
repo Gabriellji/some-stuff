@@ -145,10 +145,10 @@ module.exports = {
         from: `${PATHS.src}/img`,
         to: `${PATHS.assets}/img`,
       },
-      //   {
-      //     from: `${PATHS.src}/audio`,
-      //     to: `${PATHS.assets}/audio`,
-      //   },
+      {
+        from: `${PATHS.src}/fonts`,
+        to: `${PATHS.assets}/fonts`,
+      },
       {
         from: `${PATHS.src}/static`,
         to: '',
