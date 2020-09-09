@@ -1,5 +1,6 @@
 
 @import 'utils/_fonts';
+@import 'scroll';
 
 $bp-small: 800px;
 $bp-large: 1450px;
@@ -33,7 +34,6 @@ $bp-large: 1450px;
   --base-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -45,12 +45,27 @@ body {
   overflow-x: hidden;
   margin: 0;
   &::-webkit-scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: var(--white);
+    opacity: 1;
+    width: 4px;
+    height: 75px !important;
+    border-radius: 0;
+    margin: 5px;
+    cursor: grab;
   }
 
   &::-webkit-scrollbar{
-    width: 5px;
-    background-color: var(--grey);
+     position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 1;
   }
 }
 
@@ -132,12 +147,15 @@ a {
   justify-content: center;
   background-color: var(--grey);
   & .main-wrapper {
-    width: calc(100% - var(--wrap)*2);
-    align-self: center;
+    width: calc(100% - var(--wrap));
     display: flex;
     & .general-info {
       width: calc(100% - var(--wrap)*2);
       position: absolute;
+      top: 10vh;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(2rem);
       & h1 {
         margin: 0;
         width: 100%;
@@ -164,14 +182,37 @@ a {
       width: 100%;
       display: flex;
       flex-direction: row-reverse;
+      background-image: url('../img/gab.jpg');
+      background-size: contain;
+      background-position-x: right;
+      background-position-y: bottom;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: translateX(-6rem);
       & img {
         width: 60%;
-        align-self: flex-end;
+        align-self: center;
       }
     }
+
+    // .show-main-photo {
+    //   transform: translateX(-2rem);
+    //   opacity: 1;
+    //   transition:
+    //   opacity 1s var(--base-timing-function),
+    //   transform 1s var(--base-timing-function);
+
+    // }
+
+    // .show-main-text {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    //   transition:
+    //   opacity 1s var(--base-timing-function),
+    //   transform 1s var(--base-timing-function);
+    // }
   }
 }
-
 
 // Features
 .featured-content {
