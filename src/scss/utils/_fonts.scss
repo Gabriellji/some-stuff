@@ -41,5 +41,20 @@
          url('/assets/fonts/sk-modernist-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: Shumi;
+    src: url('/assets/fonts/Shumi.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Syntha;
+    src: url('/assets/fonts/Syntha.ttf') format('truetype'),;
+    font-weight: normal;
+    font-style: normal;
 
 }
