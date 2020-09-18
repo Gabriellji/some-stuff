@@ -6,12 +6,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import * as THREE from 'three';
-import View from '../view/View';
-import model from '../model/Model';
-
-/* eslint-disable no-new */
-new View();
-model.preInit();
 
 const features = document.querySelectorAll('.feature');
 
