@@ -4,6 +4,7 @@
 
 $bp-small: 800px;
 $bp-large: 1450px;
+$bp-table: 768px;
 
 :root {
   --black:  rgb( 20,  20,  20);
@@ -579,6 +580,9 @@ width: 26%;
   display: none;
 }
 #grid {
+  @media (max-width: $bp-table) {
+    display: none;
+}
   width: 20%;
   position: absolute;
   right: 1rem;
