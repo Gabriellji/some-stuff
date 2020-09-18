@@ -1,10 +1,17 @@
 import 'app/index';
 import '../scss/main.scss';
+
 import LocomotiveScroll from 'locomotive-scroll';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import * as THREE from 'three';
+import View from '../view/View';
+import model from '../model/Model';
+
+/* eslint-disable no-new */
+new View();
+model.preInit();
 
 const features = document.querySelectorAll('.feature');
 
@@ -71,6 +78,17 @@ gsap.fromTo('.photo-container', {
 {
   opacity: 1,
   x: 0,
+  duration: 1,
+});
+
+gsap.fromTo('#grid', {
+  opacity: 0,
+  y: -100,
+  duration: 1,
+},
+{
+  opacity: 1,
+  y: 0,
   duration: 1,
 });
 

@@ -473,7 +473,6 @@ a {
   text-transform: lowercase;
 }
 
-
 .eye {
   --pupil-x: 0;
   --pupil-y: 0;
@@ -487,6 +486,7 @@ a {
   fill: none;
   transform: scale(var(--scale));
   position: absolute;
+  opacity: 1; 
 }
 
 #eye-0 {
@@ -578,18 +578,9 @@ width: 26%;
   width: 20%;
   position: absolute;
   right: 1rem;
-  // --num-columns: 1;
-  // --num-rows: 1;
-  // width: 100%;
-  // height: 100vh;
-  // display: grid;
-  // grid-template-columns: repeat(var(--num-columns), 1fr);
-  // grid-template-rows: repeat(var(--num-rows), 1fr);
+  opacity: 0;
 }
-body {
-  --bg: #111;
-  background: var(--bg);
-}
+
 .lashes {
   fill: var(--color-pupil);
   cx: 500px;
