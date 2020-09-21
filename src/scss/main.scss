@@ -49,6 +49,7 @@ body {
   background-color: #070708;
   background-image: url(/AU_FG_Texture-8.jpg);
   background-blend-mode: soft-light;
+  background-repeat: no-repeat;
   font-family: var(--font-secondary);
   overflow-x: hidden;
   margin: 0;
@@ -169,6 +170,7 @@ main {
     background-color: #2222a7;
     background-image: url('../img/AU_FG_Texture-8.jpg');
     background-blend-mode: soft-light;
+    background-repeat: no-repeat;
   }
   & .main-wrapper {
     width: calc(100% - var(--wrap));
@@ -178,6 +180,7 @@ main {
     background-color: #070708;
     background-image: url('../img/AU_FG_Texture-8.jpg');
     background-blend-mode: soft-light;
+    background-repeat: no-repeat;
     & .general-info {
       width: calc(100% - var(--wrap)*2);
       position: absolute;
@@ -422,6 +425,7 @@ main {
     transform 0.5s var(--base-timing-function);
     background-image: url(/AU_FG_Texture-2.jpg);
     background-blend-mode: screen;
+    background-repeat: no-repeat;
   }
   
   @media (min-width: $bp-small) {
