@@ -191,3 +191,28 @@ function init() {
 }
 
 init();
+
+(function perspective() {
+  const dists = [-4, 4, -4, -4];
+  const panel = document.getElementById('panel');
+  const letters = Array.from(document.querySelectorAll('.js-letter'));
+  let w = window.innerWidth / 2;
+  let h = window.innerHeight / 2;
+
+  const update = (e) => {
+    const x = (e.pageX - w) / w;
+    const y = (e.pageY - h) / h;
+    panel.style.transform = `rotateX(${y * -20}deg) rotateY(${x * 20}deg)`;
+    letters.forEach((letter, i) => {
+      const clone = letter;
+      const dist = (x + y * 1.5) * dists[i];
+      clone.style.transform = `translateZ(${dist}vh)`;
+    });
+  };
+
+  document.body.addEventListener('mousemove', update);
+  window.addEventListener('resize', () => {
+    w = window.innerWidth / 2;
+    h = window.innerHeight / 2;
+  });
+}());
