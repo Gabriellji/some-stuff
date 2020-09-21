@@ -167,7 +167,7 @@ main {
     height: 90vh;
     background-color: lightblue;
     background-color: #2222a7;
-    background-image: url(/AU_FG_Texture-8.jpg);
+    background-image: url('../img/AU_FG_Texture-8.jpg');
     background-blend-mode: soft-light;
   }
   & .main-wrapper {
@@ -176,7 +176,7 @@ main {
     z-index: 1;
     padding: 2rem;
     background-color: #070708;
-    background-image: url(/AU_FG_Texture-8.jpg);
+    background-image: url('../img/AU_FG_Texture-8.jpg');
     background-blend-mode: soft-light;
     & .general-info {
       width: calc(100% - var(--wrap)*2);
@@ -209,6 +209,9 @@ main {
       }
     }
     & .photo-container {
+      @media (max-width: $bp-table) {
+        display: block;
+    }
       width: 100%;
       display: flex;
       flex-direction: row-reverse;
@@ -219,8 +222,9 @@ main {
       // background-repeat: no-repeat;
       opacity: 0;
       transform: translateX(-6rem);
+      display: none;
       & img {
-        width: 25%;
+        width: 70%;
         position: absolute;
         bottom: 6rem;
         right: 4rem;
@@ -230,11 +234,13 @@ main {
           margin-right: 2rem;
           //background-color: #bb01dd;
           background-color: #ef7e68;
-          background-image: url(/AU_FG_Texture-2.jpg);
+          background-image: url('../img/AU_FG_Texture-2.jpg');
           background-blend-mode: screen;
           
           //box-shadow: 39px 30px 0px 8px rgba(0,182,198,0.88);
-          box-shadow: 39px 30px 0px 8px rgba(136,113,177,0.88);
+          //box-shadow: 39px 30px 0px 8px rgba(136,113,177,0.88);
+
+          box-shadow: 39px 30px 0px 8px #5757c8;
       }
     }
 
@@ -268,6 +274,15 @@ main {
   //background-color: var(--light-blue);
   // background-color: #16162a;
   background-color: #cfdf25;
+  background-image: url('../img/AU_FG_Texture-2.jpg');
+          background-blend-mode: screen;
+
+  & .flow-wrap {
+    @media (min-width: $bp-small) {
+      display: unset;
+  }
+    display: none;
+  }
 
   &.show-feature .flow-wrap {
     transform: translateX(9%);
@@ -279,6 +294,7 @@ main {
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
     height: 100vh;
     background-color: transparent;
+    background-image: none;
 }
   
   &:nth-child(2n) {
@@ -505,7 +521,7 @@ main {
   --pupil-x: 0;
   --pupil-y: 0;
   --color-whites: var(--fg, #fff);
-  --color-lid: rgb(35 35 38);
+  --color-lid: rgb(38 38 42);
   --color-pupil: #ef7e68;
   --color-glint: var(--fg, #fff);
   --scale: 0.75;
@@ -518,45 +534,45 @@ main {
 }
 
 #eye-0 {
-  left: -377%;
+  left: 0%;
     top: 1rem;
     width: 100%;
 }
 
 #eye-1 {
   width: 36%;
-  right: 94%;
-  top: 10rem;
+    right: 94%;
+    top: 34rem;
 }
 
 #eye-2 {
   right: 37%;
-  top: 9rem;
+  top: 30rem;
   width: 54%;
 }
 
 #eye-3 {
   right: 70%;
-  top: 15rem;
-width: 26%;
+  top: 33rem;
+  width: 26%;
 }
 
 #eye-4 {
   right: 67%;
-  top: 7rem;
-  width: 46%;
+    top: 35rem;
+    width: 46%;
 }
 
 #eye-5 {
   right: 78%;
-    top: 1rem;
+    top: 30rem;
     width: 40%;
 }
 
 #eye-6 {
   right: 23%;
-  top: 4rem;
-  width: 24%;
+    top: 34rem;
+    width: 24%;
 }
 
 #eye-7 {
@@ -606,7 +622,7 @@ width: 26%;
   @media (max-width: $bp-table) {
     display: none;
 }
-  width: 20%;
+  width: 39%;
   position: absolute;
   right: 1rem;
   top: 5rem;

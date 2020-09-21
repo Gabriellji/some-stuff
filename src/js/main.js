@@ -115,7 +115,7 @@ const baseObject = document.getElementById('base-eye');
 const grid = document.getElementById('grid');
 let eyes;
 let eyeCenters;
-const eyeDensity = 1;
+const eyeDensity = 3;
 let numEyesX;
 let numEyesY;
 const center = new THREE.Vector2();
